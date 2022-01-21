@@ -1,0 +1,28 @@
+---
+title: "Test for harmful shifts"
+description: |
+  Statistical tests for detecting dataset shifts.
+categories:
+  - machine learning
+  - statistics
+slug: dsos2022intro
+author:
+  - name: Vathy M. Kamulete
+    url: https://www.vathymut.org/
+base_url: https://www.vathymut.org/
+date: 2022-01-20
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I guess I might as well start with dataset shift... But it'll have to wait. If
+you cannot resist, you can see all the gory details
+[here](https://arxiv.org/abs/2107.02990).
+
+

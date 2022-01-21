@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "path": "blog.html",
+      "title": "Blog Posts",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-01-20T19:44:19-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Welcome!",
+      "author": [],
+      "contents": "\r\n\r\n          \r\n          \r\n          Vathy M. Kamulete\r\n          Welcome\r\n          Blog\r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          Welcome!\r\n          \r\n            \r\n                \r\n                  \r\n                    LinkedIn\r\n                  \r\n                \r\n              \r\n                            \r\n                \r\n                  \r\n                    Twitter\r\n                  \r\n                \r\n              \r\n                            \r\n                \r\n                  \r\n                    GitHub\r\n                  \r\n                \r\n              \r\n                            \r\n                \r\n                  \r\n                    Email\r\n                  \r\n                \r\n              \r\n                          \r\n        \r\n\r\n        \r\n          \r\n      \r\n      \r\n        \r\n          \r\n          About this blog\r\n          I’m Vathy! I blog about various topics of interest in statistics and machine learning.\r\n          I am passionate about a few things and I am fortunate that one of these passions is also my day job. Somehow it contrives to pay the bills. This space is to share that passion. Now and again, to keep you on your tippy toes, I might swerve off the road. I might even write about other things…\r\n          You have been warned. If I did not scare you away, join me on this weird and fun adventure.\r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Welcome!\r\n            \r\n            \r\n              \r\n                \r\n                                    \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                                  \r\n              \r\n            \r\n            \r\n              \r\n              About this blog\r\n              I’m Vathy! I blog about various topics of interest in statistics and machine learning.\r\n              I am passionate about a few things and I am fortunate that one of these passions is also my day job. Somehow it contrives to pay the bills. This space is to share that passion. Now and again, to keep you on your tippy toes, I might swerve off the road. I might even write about other things…\r\n              You have been warned. If I did not scare you away, join me on this weird and fun adventure.\r\n              \r\n            \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
+      "last_modified": "2022-01-20T19:44:20-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

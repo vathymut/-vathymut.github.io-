@@ -1,0 +1,22 @@
+[
+  {
+    "path": "posts/2022-01-20-test-for-harmful-shifts/",
+    "title": "Test for harmful shifts",
+    "description": "Statistical tests for detecting dataset shifts.",
+    "author": [
+      {
+        "name": "Vathy M. Kamulete",
+        "url": "https://www.vathymut.org/"
+      }
+    ],
+    "date": "2022-01-20",
+    "categories": [
+      "machine learning",
+      "statistics"
+    ],
+    "contents": "\r\nI guess I might as well start with dataset shift… But it’ll have to wait. If you cannot resist, you can see all the gory details here\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-01-20T19:32:17-05:00",
+    "input_file": {}
+  }
+]

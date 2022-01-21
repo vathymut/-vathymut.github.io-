@@ -1,0 +1,31 @@
+name: "vathymut.org"
+title: "Vathy M. Kamulete"
+theme: assets/theme.css
+description: |
+  Vathy M. Kamulete's website and blog on machine learning (applied statistics)
+  from the trenches (in industry) and beyond. 
+base_url: https://vathymut.org/
+output_dir: "docs"
+twitter: 
+  site: "@vathymut"
+repository_url: https://github.com/vathymut/vathymut.github.io
+creative_commons: CC BY
+collections:
+  posts:
+    categories: true
+    categories_metadata: true
+    authors_metadata: false
+    feed_iems_max: 20 # default
+    share: [twitter, linkedin]
+navbar:
+  left:
+    - text: "Welcome"
+      href: index.html
+    - text: "Blog"
+      href: blog.html
+  right:
+    - icon: fab fa-github
+      href: https://github.com/vathymut
+    - icon: fab fa-twitter
+      href: https://twitter.com/vathymut
+output: distill::distill_article

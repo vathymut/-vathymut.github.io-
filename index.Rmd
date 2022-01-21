@@ -1,0 +1,29 @@
+---
+title: "Welcome!"
+image: "images/avatar.PNG"
+links:
+  - label: LinkedIn
+    url: "https://linkedin.com/in/vathy-m-kamulete-24655ba3"
+  - label: Twitter
+    url: "https://twitter.com/vathymut"
+  - label: GitHub
+    url: "https://github.com/vathymut"
+  - label: Email
+    url: "mailto:vathymut@gmail.com"
+output:
+  postcards::solana
+site: distill::distill_website  
+---
+
+## About this blog
+
+I'm **Vathy**! I blog about various topics of interest in statistics and
+machine learning. 
+
+I am passionate about a few things and I am fortunate that one of these
+passions is also my day job. Somehow it contrives to pay the bills.
+This space is to share that passion. Now and again, to keep you on your tippy
+toes, I might swerve off the road. I might even write about other things...
+
+You have been warned. If I did not scare you away, join me on this weird and
+fun adventure.
