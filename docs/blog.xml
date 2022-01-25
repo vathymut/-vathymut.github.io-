@@ -5,19 +5,18 @@
     <link>https://vathymut.org/</link>
     <atom:link href="https://vathymut.org/blog.xml" rel="self" type="application/rss+xml"/>
     <description>Vathy M. Kamulete's website and blog on machine learning (applied statistics)
-from the trenches (in industry) and beyond. 
+from the trenches and beyond. 
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jan 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Test for harmful shifts</title>
+      <title>In gentle praise of classifiers as tests</title>
       <dc:creator>Vathy M. Kamulete</dc:creator>
-      <link>https://vathymut.org/posts/2022-01-20-test-for-harmful-shifts</link>
-      <description>Statistical tests for detecting dataset shifts.</description>
-      <category>machine learning</category>
-      <category>statistics</category>
-      <guid>https://vathymut.org/posts/2022-01-20-test-for-harmful-shifts</guid>
-      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
+      <link>https://vathymut.org/posts/2022-01-22-in-gentle-praise-of-modern-tests</link>
+      <description>Modern two-sample statistical tests based on today's high-capacity
+classifiers are powerful and still, underappreciated.</description>
+      <guid>https://vathymut.org/posts/2022-01-22-in-gentle-praise-of-modern-tests</guid>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

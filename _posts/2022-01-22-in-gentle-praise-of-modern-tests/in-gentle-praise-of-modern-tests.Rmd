@@ -1,0 +1,121 @@
+---
+title: "In gentle praise of classifiers as tests"
+description: |
+  Modern two-sample statistical tests based on today's high-capacity
+  classifiers are powerful and still, underappreciated.
+author:
+  - name: Vathy M. Kamulete
+    url: https://www.vathymut.org/
+    orcid_id: 0000-0002-4451-3743
+base_url: https://www.vathymut.org/
+date: 2022-01-22
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+bibliography: reference.bib
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The late great statistician, [Sir David Cox](https://en.wikipedia.org/wiki/David_Cox_(statistician)),
+has a talk titled [In gentle praise of significance tests](https://youtu.be/txLj_P9UlCQ).
+It is, of course, only *gentle praise* because inevitably, there are some
+issues to deal with. I too have a bone to pick. But
+we will get to the beef much later. First, the *praise*.
+
+Remember the old two-sample tests? They go by different names: test of equal
+distribution, of homogeneity, of goodness-of-fit, etc. The gist of it is you
+have two samples. And so, you wonder, are they the same? Are the two samples
+drawn from the same population? Rings a bell, right? The Kolmogorov–Smirnov
+test is a [classic](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test)
+and is typically one of the first statistical test you learn for this.
+But the <abbr title="Kolmogorov–Smirnov">K-S</abbr> test is for yesteryear,
+before the advent of *big* and *high dimensional* data 😱.
+
+Since then, the field has come up with powerful two-sample tests for the Big
+Data era. Every year, exciting works are published on the subject. I
+recently messed about with the Ball divergence approach [@pan2018ball].
+You, no doubt, have your chosen own adventure. There has been tremendous
+progress. Let Uncle Larry
+[explain](https://normaldeviate.wordpress.com/2012/07/14/modern-two-sample-tests/).^[Click
+on that link. I won't be offended; I will in fact, happily, wait.]
+
+<aside>
+That is, err <a href="https://en.wikipedia.org/wiki/Larry_A._Wasserman">Larry A.
+Wasserman</a>.
+</aside>
+
+And now you are, more or less, caught up with the state-of-the-art on
+two-sample tests. The End. OK, not so fast. You see, Uncle Larry left out
+something important. He discusses 3 ideas: kernel, energy, and cross-match
+tests. Trust me when I say, he wants you to know about the classifier tests too
+[@kim2021classification]. Here is how they work. You assign your samples to
+different classes (you give them labels). Sample 1 is the positive class,
+and Sample 2, the negative one or vice versa. Then, you fit your
+favorite classifier to see if it can reliably predict sample membership. If
+it can with high accuracy, it means the two samples are probably different. If
+it cannot, the two samples are similar enough. To use the jargon, the null
+hypothesis holds.
+
+<aside>
+Details, casually swept under the rug, include deriving $p-$value from the
+classifier performance. The short answer is permutation is your friend.
+</aside>
+
+The thing is most people do not seem to know about two-sample classifier
+tests. In comparison, kernel tests seem *ubiquitous* (if you are looking at
+academic journals, not if you're hanging out on Twitter). Even energy
+(distance-based) tests are in some fundamental sense also
+kernel tests [@sejdinovic2012hypothesis; @shen2020exact]. Do not get me wrong.
+I like me some kernels too. The math *is* deep and beautiful -- you get arcane
+incantations to voodoo magic such as
+<abbr title="Reproducing kernel Hilbert space">RKHS</abbr> theory. But it begs
+the question. How do classifier tests stack up against kernel tests?
+
+No spoiler from me. Let @lopez2017revisiting do it:
+
+<blockquote>
+Our take-home message is that modern binary classifiers can be easily turned
+into powerful two-sample tests. We have shown that these classifier two-sample
+tests set a new state-of-the-art in performance, and enjoy unique attractive
+properties: they are easy to implement, learn a representation of the data
+on the fly, have simple asymptotic distributions, and allow different ways to
+interpret how the two samples under study differ.
+</blockquote>
+
+They do not often tell you this. You can in fact
+think of [a kernel test as a classifier test](https://openreview.net/forum?id=SJkXfE5xx&noteId=ry-le414x).
+And you know what, data scientists are really **good** at supervised
+classification. It is our bread
+and butter; it is Kaggle 101. Talk statistical tests and $p-$values, eyes glaze
+over and no one is listening. Say 50% accuracy instead, suddenly everyone
+understands and is nodding vigorously. No RKHS magic needed -- this is yuge.
+
+<iframe src="https://giphy.com/embed/NM2SEXpp58mwU" width="480" height="265" frameBorder="0" class="giphy-embed" allowFullScreen>
+</iframe>
+<p><a href="https://giphy.com/gifs/mic-snl-bernie-sanders-feel-the-bern-NM2SEXpp58mwU">From GIPHY</a></p>
+
+Here is @cai2020two, more recently, to hammer the point home:
+
+<blockquote>
+We propose a test for two-sample problem based on estimates of classification
+probabilities obtained from a consistent classification algorithm. [...] Our
+test is more powerful and efficient than many other tests.
+</blockquote>
+
+Practicing data scientists cannot afford to ignore two-sample classifier tests.
+They are powerful, easy to implement and easy to explain, the elusive
+trifecta^[Think the son, the father and the holy spirit, the divine
+trinity, meaning no offense. This being the internet, I am sure I have anyway.].
+Plenty of works advocate for the two-sample classifier test [@friedman2004multivariate; 
+@vayatis2009auc; @liu2018classifier; @hediger2019use; @kirchler2020two]. Still, 
+they remain for the most part underappreciated. No one
+(anyone you know?) brags about them, the way for example that they would about
+the newest kernel test on the block. I suspect it is because the theory seems
+*boring* in comparison. In practice, these guys pack a punch. This is worth
+praising. The two-sample classifier tests need more love. They deserve it.
+
