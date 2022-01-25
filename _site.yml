@@ -3,7 +3,7 @@ title: "Vathy M. Kamulete"
 theme: assets/theme.css
 description: |
   Vathy M. Kamulete's website and blog on machine learning (applied statistics)
-  from the trenches (in industry) and beyond. 
+  from the trenches and beyond. 
 base_url: https://vathymut.org/
 output_dir: "docs"
 twitter: 
@@ -28,4 +28,7 @@ navbar:
       href: https://github.com/vathymut
     - icon: fab fa-twitter
       href: https://twitter.com/vathymut
+    - icon: fa fa-rss
+      href: index.xml
 output: distill::distill_article
+google_analytics: "G-BK3FXSV7FT"
