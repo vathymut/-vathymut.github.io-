@@ -10,10 +10,10 @@ from the trenches and beyond.
     <generator>Distill</generator>
     <lastBuildDate>Sat, 22 Jan 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>In gentle praise of classifiers as tests</title>
+      <title>In gentle praise of classifier tests</title>
       <dc:creator>Vathy M. Kamulete</dc:creator>
       <link>https://vathymut.org/posts/2022-01-22-in-gentle-praise-of-modern-tests</link>
-      <description>Modern two-sample statistical tests based on today's high-capacity
+      <description>Two-sample statistical tests based on modern high-capacity
 classifiers are powerful and still, underappreciated.</description>
       <guid>https://vathymut.org/posts/2022-01-22-in-gentle-praise-of-modern-tests</guid>
       <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>

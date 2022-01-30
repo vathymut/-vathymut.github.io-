@@ -1,7 +1,7 @@
 ---
-title: "In gentle praise of classifiers as tests"
+title: "In gentle praise of classifier tests"
 description: |
-  Modern two-sample statistical tests based on today's high-capacity
+  Two-sample statistical tests based on modern high-capacity
   classifiers are powerful and still, underappreciated.
 author:
   - name: Vathy M. Kamulete
@@ -24,25 +24,25 @@ knitr::opts_chunk$set(echo = FALSE)
 The late great statistician, [Sir David Cox](https://en.wikipedia.org/wiki/David_Cox_(statistician)),
 has a talk titled [In gentle praise of significance tests](https://youtu.be/txLj_P9UlCQ).
 It is, of course, only *gentle praise* because inevitably, there are some
-issues to deal with. I too have a bone to pick. But
+issues. I too have a bone to pick. But
 we will get to the beef much later. First, the *praise*.
 
 Remember the old two-sample tests? They go by different names: test of equal
 distribution, of homogeneity, of goodness-of-fit, etc. The gist of it is you
-have two samples. And so, you wonder, are they the same? Are the two samples
-drawn from the same population? Rings a bell, right? The [Kolmogorov–Smirnov
+have two samples. And so, you wonder, are they similar enough? Rings a bell,
+right? The [Kolmogorov–Smirnov
 test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test) is a 
 classic for this sort of thing. But the
 <abbr title="Kolmogorov–Smirnov">K-S</abbr> test is old news, well before the
 advent of *big* and *high dimensional* data 😱.
 
-Since then, the field has come up with powerful two-sample tests for the Big
+Since then, the field is churning out powerful two-sample tests for the Big
 Data era. Every year, exciting works are published on the subject. I
 recently messed about with the Ball divergence approach [@pan2018ball].
-You, no doubt, have your chosen own adventure. There has been tremendous
+You, no doubt, chose your own adventure. There has been tremendous
 progress. Let Uncle Larry
-[explain](https://normaldeviate.wordpress.com/2012/07/14/modern-two-sample-tests/).^[Click
-on that link. I won't be offended; I will in fact, happily, wait.]
+[explain](https://normaldeviate.wordpress.com/2012/07/14/modern-two-sample-tests/)^[Click
+on that link. I won't be offended; I will in fact, happily, wait.].
 And now you are, more or less, caught up with the state-of-the-art in
 two-sample tests. The End.
 
@@ -57,28 +57,26 @@ tests. Trust me when I say, he wants you to know about the classifier tests too
 [@kim2021classification]. Here is how they work. You assign your samples to
 different classes (you give them labels). Sample 1 is the positive class,
 and Sample 2, the negative one or vice versa. Then, you fit your
-favorite classifier to see if it can reliably predict sample membership. If
+favorite classifier to see if it can reliably predict the label. If
 it can with high accuracy, it means the two samples are probably different. If
-it cannot, the two samples are similar enough. To use the jargon, the null
-hypothesis holds. That is easy enough.
+it cannot, the two samples are similar enough. It seems obvious in hindsight,
+does it not? It is not even *deceptively* simple: it is *actually* simple.
 
 <aside>
 Details, casually swept under the rug, include deriving $p-$value from the
 classifier performance. The short answer is permutation is your friend.
 </aside>
 
-The thing is most people do not seem to know about two-sample classifier
-tests. In comparison, kernel tests seem ubiquitous (if you are looking at
-academic journals, not if you're hanging out on Twitter). @kirchler2020two
-is a nice example of this trend. Their test statistics is
-<abbr title="Maximum Mean Discrepancy">MMD-inspired</abbr> and to spice it up,
-they sprinkle some deep learning in between. Even energy tests, one of the
-innovation that Uncle Larry discusses, are in a fundamental sense
-kernel tests [@sejdinovic2012hypothesis; @shen2020exact]. It is kernels all
-the way down. Do not get me wrong. I like me some kernels too. The math *is*
-elegant -- you get arcane incantations to voodoo magic such as
-<abbr title="Reproducing kernel Hilbert space">RKHS</abbr> theory. But it begs
-the question. How do classifier tests stack up against kernel tests?
+The thing is most people do not seem to know about two-sample classifier tests.
+In comparison, kernel tests seem ubiquitous (if you are looking at academic
+journals, not if you're hanging out on Twitter). Even the energy tests, one of the
+innovation that Uncle Larry discusses, are in a fundamental sense equivalent to
+the kernel tests [@sejdinovic2012hypothesis; @shen2020exact]. It is kernels all
+the way down. On the theoretical front, the mathematical maturity
+to wield this awesome kernel power may require arcane incantations to
+<abbr title="Reproducing kernel Hilbert space">RKHS</abbr> voodoo magic.
+Still, it begs the question. How do classifier tests stack up against kernel
+tests?
 
 No spoiler from me. Let @lopez2017revisiting do it:
 
@@ -93,11 +91,10 @@ interpret how the two samples under study differ.
 
 They do not often tell you this. You can in fact
 think of [a kernel test as a classifier test](https://openreview.net/forum?id=SJkXfE5xx&noteId=ry-le414x).
-And you know what, data scientists are really **good** at supervised
-classification. It is our bread
-and butter; it is Kaggle 101. Talk statistical tests and $p-$values, eyes glaze
+And you know what, data scientists are really good at supervised
+classification. Talk $p-$values, eyes glaze
 over and no one is listening. Say 50% accuracy instead, suddenly everyone
-understands and is nodding vigorously. No RKHS magic needed -- this is yuge.
+understands and is nodding vigorously. No RKHS magic needed -- this is yuge. 
 
 <iframe src="https://giphy.com/embed/NM2SEXpp58mwU" width="480" height="265" frameBorder="0" class="giphy-embed" allowFullScreen>
 </iframe>
@@ -114,8 +111,8 @@ test is more powerful and efficient than many other tests.
 Practicing data scientists cannot afford to ignore two-sample classifier tests.
 They are powerful, easy to implement and easy to explain, the elusive
 trifecta^[Think the son, the father and the holy spirit, the divine
-trinity, meaning no offense.]. Plenty of works advocate for the two-sample
-classifier test [@friedman2004multivariate; 
+trinity.]. Plenty of works advocate for the
+classifier tests [@friedman2004multivariate; 
 @vayatis2009auc; @liu2018classifier; @hediger2019use]. Still, 
 they remain for the most part underappreciated. No one
 (anyone you know?) brags about them, the way for example that they would about
