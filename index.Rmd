@@ -17,6 +17,6 @@ site: distill::distill_website
 
 I'm **Vathy**! I blog about statistics and machine learning. 
 
-I am fortunate: one of my passions is also my day job. This space is to
-share that passion. All opinions are, of course, my own. Now and again, to keep
+I am fortunate: one of my passions is also my day job. That said, all opinions
+here are, of course, my own. Now and again, to keep
 you on your tippy toes, I might write about other things.
