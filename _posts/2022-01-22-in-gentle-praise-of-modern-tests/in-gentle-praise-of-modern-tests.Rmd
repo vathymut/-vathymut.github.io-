@@ -36,8 +36,8 @@ classic for this sort of thing. But the
 <abbr title="Kolmogorov–Smirnov">K-S</abbr> test is old news, well before the
 advent of *big* and *high dimensional* data 😱.
 
-Since then, the field is churning out powerful two-sample tests for the Big
-Data era. Every year, exciting works are published on the subject. I
+Since then, the field has been churning out powerful two-sample tests for the
+Big Data era. Every year, exciting works are published on the subject. I
 recently messed about with the Ball divergence approach [@pan2018ball].
 You, no doubt, chose your own adventure. There has been tremendous
 progress. Let Uncle Larry
@@ -58,7 +58,7 @@ tests. Trust me when I say, he wants you to know about the classifier tests too
 different classes (you give them labels). Sample 1 is the positive class,
 and Sample 2, the negative one or vice versa. Then, you fit your
 favorite classifier to see if it can reliably predict the label. If
-it can with high accuracy, it means the two samples are probably different. If
+it can, it means the two samples are probably different. If
 it cannot, the two samples are similar enough. It seems obvious in hindsight,
 does it not? It is not even *deceptively* simple: it is *actually* simple.
 
@@ -67,7 +67,7 @@ Details, casually swept under the rug, include deriving $p-$value from the
 classifier performance. The short answer is permutation is your friend.
 </aside>
 
-The thing is most people do not seem to know about two-sample classifier tests.
+And yet, most people do not seem to know about two-sample classifier tests.
 In comparison, kernel tests seem ubiquitous (if you are looking at academic
 journals, not if you're hanging out on Twitter). Even the energy tests, one of the
 innovation that Uncle Larry discusses, are in a fundamental sense equivalent to
@@ -75,10 +75,12 @@ the kernel tests [@sejdinovic2012hypothesis; @shen2020exact]. It is kernels all
 the way down. On the theoretical front, the mathematical maturity
 to wield this awesome kernel power may require arcane incantations to
 <abbr title="Reproducing kernel Hilbert space">RKHS</abbr> voodoo magic.
-Still, it begs the question. How do classifier tests stack up against kernel
-tests?
+But no matter, word to [Eric B. & Rakim](https://youtu.be/6Y1Emb7Jyks), we won't
+sweat the technique.
 
-No spoiler from me. Let @lopez2017revisiting do it:
+Still, this all begs the question. How do the humble classifier tests stack up
+against the more celebrated kernel tests? No spoiler from me. Let
+@lopez2017revisiting do it:
 
 <blockquote>
 Our take-home message is that modern binary classifiers can be easily turned
@@ -92,7 +94,7 @@ interpret how the two samples under study differ.
 They do not often tell you this. You can in fact
 think of [a kernel test as a classifier test](https://openreview.net/forum?id=SJkXfE5xx&noteId=ry-le414x).
 And you know what, data scientists are really good at supervised
-classification. Talk $p-$values, eyes glaze
+classification. Say $p-$values, eyes glaze
 over and no one is listening. Say 50% accuracy instead, suddenly everyone
 understands and is nodding vigorously. No RKHS magic needed -- this is yuge. 
 
