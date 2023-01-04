@@ -1574,12 +1574,13 @@ drastically. Chip Huyen has a great primer on dataset shift
 shift, the industry often relies on statistical tests. The most common ones are
 tests of equal distributions and tests of mean difference. And I posit, both
 let you down in perhaps surprising ways when it comes to the Question ©
-<del>Which is? You still with up, right?</del></p>
+<del>Which is? You still with me, right?</del></p>
 <p>In a previous
 <a href="https://vathymut.org/posts/2022-01-22-in-gentle-praise-of-modern-tests/">post</a>,
 I praised modern test of equal distribution. But I did warn you that I had
 some beef too. It is time to settle the score. These tests fail us (it isn’t
-their fault; it’s ours, the users) when testing for harmful or adverse shifts
+their fault; it’s ours, the users) when testing for harmful or adverse shifts.
+They fail
 because “not all changes in distribution are a cause for concern - some
 changes are benign” <span class="citation" data-cites="kamulete2022test">(<a href="#ref-kamulete2022test" role="doc-biblioref">Kamulete 2022</a>)</span>. Here is a simple pathological case
 to convince yourself of this. Suppose that your original sample was
@@ -1620,7 +1621,7 @@ implements the approach in <span class="citation" data-cites="kamulete2022test">
 tests are not good enough, what are the alternatives? I referred to two already
 <span class="citation" data-cites="kamulete2022test lindon2022rapid">(<a href="#ref-kamulete2022test" role="doc-biblioref">Kamulete 2022</a>; <a href="#ref-lindon2022rapid" role="doc-biblioref">Lindon, Sanden, and Shirikian 2022</a>)</span>. Full disclosure: I am the author of
 <span class="citation" data-cites="kamulete2022test">Kamulete (<a href="#ref-kamulete2022test" role="doc-biblioref">2022</a>)</span>, published last year in UAI2022. Here are a few more that are
-answering the Question © in some ways more rigorously, more precisely
+answering the Question © more rigorously and precisely
 <span class="citation" data-cites="podkopaev2021tracking luo2022online vovk2021retrain harel2014concept">(<a href="#ref-podkopaev2021tracking" role="doc-biblioref">Podkopaev and Ramdas 2021</a>; <a href="#ref-luo2022online" role="doc-biblioref">Luo et al. 2022</a>; <a href="#ref-vovk2021retrain" role="doc-biblioref">Vovk et al. 2021</a>; <a href="#ref-harel2014concept" role="doc-biblioref">Harel et al. 2014</a>)</span>
 <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.
 When discussing my own work and the <code>dsos</code> package at
