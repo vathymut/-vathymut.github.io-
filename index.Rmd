@@ -1,22 +1,5 @@
 ---
-title: "Welcome!"
-image: "images/avatar.PNG"
-links:
-  - label: LinkedIn
-    url: "https://linkedin.com/in/vathy-m-kamulete-24655ba3"
-  - label: Twitter
-    url: "https://twitter.com/vathymut"
-  - label: GitHub
-    url: "https://github.com/vathymut"
-  - label: Email
-    url: "mailto:vathymut@gmail.com"
-output:
-  postcards::trestles
-site: distill::distill_website  
+title: "Nullius in verba"  # Change to preferred Blog Post page title
+site: distill::distill_website
+listing: posts # List all blog posts
 ---
-
-I'm **Vathy**! I blog about statistics and machine learning. 
-
-I am fortunate: one of my passions is also my day job. That said, all opinions
-here are, of course, my own. Now and again, to keep
-you on your tippy toes, I might write about other things.

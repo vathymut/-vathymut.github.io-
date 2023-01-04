@@ -2,7 +2,7 @@ name: "vathymut.org"
 title: "Vathy M. Kamulete"
 theme: assets/theme.css
 description: |
-  Vathy M. Kamulete's website and blog on machine learning (applied statistics)
+  Vathy M. Kamulete's blog on machine learning (applied statistics)
   from the trenches and beyond. 
 base_url: https://vathymut.org/
 output_dir: "docs"
@@ -18,12 +18,10 @@ collections:
     feed_iems_max: 20 # default
     share: [twitter, linkedin]
 navbar:
-  left:
-    - text: "Welcome"
-      href: index.html
-    - text: "Blog"
-      href: blog.html
+  title: "ML Blog"
   right:
+    - text: "About"
+      href: about.html
     - icon: fab fa-github
       href: https://github.com/vathymut
     - icon: fab fa-twitter
@@ -32,3 +30,6 @@ navbar:
       href: index.xml
 output: distill::distill_article
 google_analytics: "G-BK3FXSV7FT"
+rss:
+  full_content: FALSE
+  categories: all

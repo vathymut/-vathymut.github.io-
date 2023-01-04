@@ -3,12 +3,21 @@
   <channel>
     <title>Vathy M. Kamulete</title>
     <link>https://vathymut.org/</link>
-    <atom:link href="https://vathymut.org/blog.xml" rel="self" type="application/rss+xml"/>
-    <description>Vathy M. Kamulete's website and blog on machine learning (applied statistics)
+    <atom:link href="https://vathymut.org/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Vathy M. Kamulete's blog on machine learning (applied statistics)
 from the trenches and beyond. 
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 22 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Are you OK? Test for harmful (adverse) shift</title>
+      <dc:creator>Vathy M. Kamulete</dc:creator>
+      <link>https://vathymut.org/posts/2023-01-03-are-you-ok</link>
+      <description>Beyond statistical tests of equal distribution and mean difference for
+dataset shift.</description>
+      <guid>https://vathymut.org/posts/2023-01-03-are-you-ok</guid>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>In gentle praise of classifier tests</title>
       <dc:creator>Vathy M. Kamulete</dc:creator>

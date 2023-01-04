@@ -1,0 +1,130 @@
+---
+title: "Are you OK? Test for harmful (adverse) shift"
+description: |
+  Beyond statistical tests of equal distribution and mean difference for
+  dataset shift.
+author:
+  - name: Vathy M. Kamulete
+    url: https://www.vathymut.org/
+    orcid_id: 0000-0002-4451-3743
+base_url: https://www.vathymut.org/
+date: 2023-01-03
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+bibliography: reference.bib
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Sometimes the pertinent question is, **are we worse off?** Like in the
+[song](https://youtu.be/CDl9ZMfj6aE), what we really want to know, Annie, is
+are you OK? We compare the way things were (the happy past) to the way things
+are (the tumultuous present). But wait, your statistical mind makes the leap,
+is this not just a two-sample comparison (test)? It *is*. But the trouble is not
+all statistical tests are well-suited to this question. The main point of
+of this post is to argue that some widely used statistical tests may come
+close but often miss the mark when it comes to answering this. The
+Question &copy; -- once more so you don't forget, are we worse off? -- is
+what I mean when I say testing for harmful or adverse shift.
+
+<aside>
+The more covert point, the sinister one, the less altruistic one to put it
+kindly, is to motivate my own academic research, of course.
+</aside>
+
+But first off, you may wonder, why does it matter? One reason to care in machine
+learning is dataset shift. Over time, things change, data drift and predictive
+models suffer as a consequence: performance deteriorate, sometimes quite
+drastically. Chip Huyen has a great primer on dataset shift
+[here](https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html)
+- it is a *fantastic* resource (go read it). It turns out, to detect dataset
+shift, the industry often relies on statistical tests. The most common ones are
+tests of equal distributions and tests of mean difference. And I posit, both
+let you down in perhaps surprising ways when it comes to the Question &copy;
+~~Which is? You still with up, right?~~
+
+In a previous
+[post](https://vathymut.org/posts/2022-01-22-in-gentle-praise-of-modern-tests/),
+I praised modern test of equal distribution. But I did warn you that I had
+some beef too. It is time to settle the score. These tests fail us (it isn't
+their fault; it's ours, the users) when testing for harmful or adverse shifts
+because "not all changes in distribution are a cause for concern - some
+changes are benign" [@kamulete2022test]. Here is a simple pathological case
+to convince yourself of this. Suppose that your original sample was
+contaminated with a few outliers. But Heaven smiles upon you; your current
+data is free of outliers. You're clearly better off. Well, tests of equal
+distributions would still tell you that the two samples are *different* i.e.
+you would reject the null of no difference. This is a false alarm. These
+tests don't answer the Question &copy;; they tell us when both
+samples can be said to be roughly equivalent, not whether we are worse off.
+As we know all too well, *different* does not mean *inferior*. We need a better
+test.
+
+Let's now address the problem with statistical tests for
+mean differences. Let me pass it to @lindon2022rapid who explains the problem
+quite succinctly:
+
+<blockquote>
+[..] we argue that performing inference about means is too limited for
+canary tests, for not all bugs or performance regressions can be captured by
+differences in the mean alone [...]. Consider PlayDelay, an important key
+indicator of the streaming quality at Netflix, which measures the time taken
+for a title to start once the user has hit the play button. It is possible for
+the mean [...] to be the same, but for the tails of the
+distribution to be heavier [...], resulting in an increased
+occurrence of extreme values. Large values of PlayDelay, even if infrequent,
+are unacceptable and considered a severe performance regression by our
+engineering teams.
+</blockquote>
+
+Again, we need a better test. Incidentally, if you were not already convinced
+that the Question &copy; is important, I *know* you are now: it is your Netflix
+binge sessions at stake here. In short, both tests of
+equal distributions and of mean differences are lacking when it comes to the
+Question &copy;.
+
+<aside>
+If you are a R user (get it? never mind), the
+<a href="https://CRAN.R-project.org/package=dsos">dsos package</a>
+implements the approach in @kamulete2022test.
+</aside>
+
+That's the bad news. What's the good news? If these widely used statistical
+tests are not good enough, what are the alternatives? I referred to two already
+[@kamulete2022test; @lindon2022rapid]. Full disclosure: I am the author of
+@kamulete2022test, published last year in UAI2022. Here are a few more that are
+answering the Question &copy; in some ways more rigorously, more precisely
+[@podkopaev2021tracking; @luo2022online; @vovk2021retrain; @harel2014concept]
+^[One rich, active and effective paradigm that in my mind does not get its due
+in ML/AI circles is statistical process control or statistical quality
+control [@gandy2017spcadjust; @flores2021statistical]. I am, unhappily I
+assure you, complicit in that here. This community also cares about the
+the Question &copy;. In fact, some may rightfully say they were pioneers in
+this.].
+When discussing my own work and the `dsos` package at
+[useR! 2022](https://youtu.be/TALE9JUir8Q?t=26), I chose the title
+"Call me when it hurts" because it tries to capture the essence of the
+Question &copy;. Data scientists want to know when there *is* a real problem: 
+raising too many false alarms is one of the fastest and surest way to lose
+credibility with your stakeholders.
+
+<aside>
+By the way, the Safe, Anytime-Valid Inference
+<a href="https://www.stat.cmu.edu/~aramdas/SAVI/savi20.html">(SAVI)</a>
+2022 workshop (conference) is a great place to start if you're looking
+for more references.
+</aside>
+
+If you stuck with me thus far, first I am sorry -- not
+sorry 😉 -- for abusing the Question &copy; as a short form for
+testing for harmful shift. It is, we agree, a silly trope not meant to be
+taken seriously. Let me conclude. While we undoubtedly need better statistical
+tests than those of equal distributions and of means difference for testing
+for harmful or adverse shift, we also happen to have more and more
+such tests at our disposal. We should use them. Alright, this is long enough.
+I need to get back to work on the next one [@kamulete2023bayes].

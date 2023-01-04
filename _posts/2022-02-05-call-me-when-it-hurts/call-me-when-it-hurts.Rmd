@@ -1,0 +1,26 @@
+---
+title: "Call me when it hurts"
+description: |
+  A short description of the post.
+author:
+  - name: Vathy M. Kamulete
+    url: https://www.vathymut.org/
+    orcid_id: 0000-0002-4451-3743
+base_url: https://www.vathymut.org/
+date: 2022-02-05
+output:
+  distill::distill_article:
+    self_contained: false
+draft: true
+bibliography: reference.bib
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+

@@ -1,0 +1,22 @@
+---
+title: "Who, Me?!"
+image: "images/avatar.PNG"
+links:
+  - label: LinkedIn
+    url: "https://linkedin.com/in/vathy-m-kamulete-24655ba3"
+  - label: Twitter
+    url: "https://twitter.com/vathymut"
+  - label: GitHub
+    url: "https://github.com/vathymut"
+  - label: Email
+    url: "mailto:vathymut@gmail.com"
+output:
+  postcards::trestles
+site: distill::distill_website  
+---
+
+Once in a blue moon, I blog about statistics and machine learning. I am
+fortunate: one of my passions is also my day job. That said, all opinions here
+are, of course, my own. Now and again, to keep you on your tippy toes, I might
+write about other things. By the way, I'm Vathy M. Kamulete and **@vathymut**
+on most social platforms.
