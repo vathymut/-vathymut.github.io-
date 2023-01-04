@@ -21,20 +21,20 @@ bibliography: reference.bib
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Sometimes the pertinent question is, **are we worse off?** Like in the
-[song](https://youtu.be/CDl9ZMfj6aE), what we really want to know, Annie, is
+Sometimes the pertinent question is, **are we worse off?**
+[Annie](https://youtu.be/CDl9ZMfj6aE), what we really want to know is
 are you OK? We compare the way things were (the happy past) to the way things
 are (the tumultuous present). But wait, your statistical mind makes the leap,
-is this not just a two-sample comparison (test)? It *is*. But the trouble is not
-all statistical tests are well-suited to this question. The main point of
-of this post is to argue that some widely used statistical tests may come
+is this not just a two-sample comparison (test)? It *is*. But the trouble is
+not all statistical tests are well-suited for this. The main point of
+this post is to argue that some widely used statistical tests may come
 close but often miss the mark when it comes to answering this. The
 Question &copy; -- once more so you don't forget, are we worse off? -- is
 what I mean when I say testing for harmful or adverse shift.
 
 <aside>
-The more covert point, the sinister one, the less altruistic one to put it
-kindly, is to motivate my own academic research, of course.
+The more covert point, the less altruistic one to put it kindly, is to motivate
+my own research, of course.
 </aside>
 
 But first off, you may wonder, why does it matter? One reason to care in machine
@@ -45,7 +45,7 @@ drastically. Chip Huyen has a great primer on dataset shift
 - it is a *fantastic* resource (go read it). It turns out, to detect dataset
 shift, the industry often relies on statistical tests. The most common ones are
 tests of equal distributions and tests of mean difference. And I posit, both
-let you down in perhaps surprising ways when it comes to the Question &copy;
+let you down in perhaps surprising ways when it comes down to the Question &copy;
 ~~Which is? You still with me, right?~~
 
 In a previous
@@ -66,9 +66,8 @@ samples can be said to be roughly equivalent, not whether we are worse off.
 As we know all too well, *different* does not mean *inferior*. We need a better
 test.
 
-Let's now address the problem with statistical tests for
-mean differences. Let me pass it to @lindon2022rapid who explains the problem
-quite succinctly:
+What about the statistical tests for mean differences? @lindon2022rapid 
+explains what the problem is:
 
 <blockquote>
 [..] we argue that performing inference about means is too limited for
@@ -86,7 +85,7 @@ engineering teams.
 Again, we need a better test. Incidentally, if you were not already convinced
 that the Question &copy; is important, I *know* you are now: it is your Netflix
 binge sessions at stake here. In short, both tests of
-equal distributions and of mean differences are lacking when it comes to the
+equal distribution and of mean difference are lacking when it comes to the
 Question &copy;.
 
 <aside>
@@ -98,16 +97,15 @@ implements the approach in @kamulete2022test.
 That's the bad news. What's the good news? If these widely used statistical
 tests are not good enough, what are the alternatives? I referred to two already
 [@kamulete2022test; @lindon2022rapid]. Full disclosure: I am the author of
-@kamulete2022test, published last year in UAI2022. Here are a few more that are
-answering the Question &copy; more rigorously and precisely
+@kamulete2022test, published in UAI2022. Here are a few more that answer
+the Question &copy; more rigorously and precisely
 [@podkopaev2021tracking; @luo2022online; @vovk2021retrain; @harel2014concept]
-^[One rich, active and effective paradigm that in my mind does not get its due
+^[One rich, active and effective paradigm that to my mind does not get its due
 in ML/AI circles is statistical process control or statistical quality
 control [@gandy2017spcadjust; @flores2021statistical]. I am, unhappily I
 assure you, complicit in that here. This community also cares about the
 the Question &copy;. In fact, some may rightfully say they were pioneers in
-this.].
-When discussing my own work and the `dsos` package at
+this.]. When discussing my own work and the `dsos` package at
 [useR! 2022](https://youtu.be/TALE9JUir8Q?t=26), I chose the title
 "Call me when it hurts" because it tries to capture the essence of the
 Question &copy;. Data scientists want to know when there *is* a real problem: 
@@ -121,11 +119,11 @@ By the way, the Safe, Anytime-Valid Inference
 for more references.
 </aside>
 
-If you stuck with me thus far, first I am sorry -- not
-sorry 😉 -- for abusing the Question &copy; as a short form for
+If you stuck with me this far, first I am sorry, not
+sorry 😉, for abusing the Question &copy; as a short form for
 testing for harmful shift. It is, we agree, a silly trope not meant to be
 taken seriously. Let me conclude. While we undoubtedly need better statistical
-tests than those of equal distributions and of means difference for testing
-for harmful or adverse shift, we also happen to have more and more
-such tests at our disposal. We should use them. Alright, this is long enough.
+tests than those of equal distribution and of mean difference for testing
+for harmful or adverse shift, we also happen to have a growing number of such
+tests at our disposal. We should use them. Alright, this is long enough.
 I need to get back to work on the next one [@kamulete2023bayes].

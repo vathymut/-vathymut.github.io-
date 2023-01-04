@@ -2533,19 +2533,19 @@ dataset shift.</p></p>
 </div>
 
 <div class="d-article">
-<p>Sometimes the pertinent question is, <strong>are we worse off?</strong> Like in the
-<a href="https://youtu.be/CDl9ZMfj6aE">song</a>, what we really want to know, Annie, is
+<p>Sometimes the pertinent question is, <strong>are we worse off?</strong>
+<a href="https://youtu.be/CDl9ZMfj6aE">Annie</a>, what we really want to know is
 are you OK? We compare the way things were (the happy past) to the way things
 are (the tumultuous present). But wait, your statistical mind makes the leap,
-is this not just a two-sample comparison (test)? It <em>is</em>. But the trouble is not
-all statistical tests are well-suited to this question. The main point of
-of this post is to argue that some widely used statistical tests may come
+is this not just a two-sample comparison (test)? It <em>is</em>. But the trouble is
+not all statistical tests are well-suited for this. The main point of
+this post is to argue that some widely used statistical tests may come
 close but often miss the mark when it comes to answering this. The
 Question © – once more so you don’t forget, are we worse off? – is
 what I mean when I say testing for harmful or adverse shift.</p>
 <aside>
-The more covert point, the sinister one, the less altruistic one to put it
-kindly, is to motivate my own academic research, of course.
+The more covert point, the less altruistic one to put it kindly, is to motivate
+my own research, of course.
 </aside>
 <p>But first off, you may wonder, why does it matter? One reason to care in machine
 learning is dataset shift. Over time, things change, data drift and predictive
@@ -2555,7 +2555,7 @@ drastically. Chip Huyen has a great primer on dataset shift
 - it is a <em>fantastic</em> resource (go read it). It turns out, to detect dataset
 shift, the industry often relies on statistical tests. The most common ones are
 tests of equal distributions and tests of mean difference. And I posit, both
-let you down in perhaps surprising ways when it comes to the Question ©
+let you down in perhaps surprising ways when it comes down to the Question ©
 <del>Which is? You still with me, right?</del></p>
 <p>In a previous
 <a href="https://vathymut.org/posts/2022-01-22-in-gentle-praise-of-modern-tests/">post</a>,
@@ -2574,9 +2574,8 @@ tests don’t answer the Question ©; they tell us when both
 samples can be said to be roughly equivalent, not whether we are worse off.
 As we know all too well, <em>different</em> does not mean <em>inferior</em>. We need a better
 test.</p>
-<p>Let’s now address the problem with statistical tests for
-mean differences. Let me pass it to <span class="citation" data-cites="lindon2022rapid">Lindon, Sanden, and Shirikian (<a href="#ref-lindon2022rapid" role="doc-biblioref">2022</a>)</span> who explains the problem
-quite succinctly:</p>
+<p>What about the statistical tests for mean differences? <span class="citation" data-cites="lindon2022rapid">Lindon, Sanden, and Shirikian (<a href="#ref-lindon2022rapid" role="doc-biblioref">2022</a>)</span>
+explains what the problem is:</p>
 <blockquote>
 [..] we argue that performing inference about means is too limited for
 canary tests, for not all bugs or performance regressions can be captured by
@@ -2592,7 +2591,7 @@ engineering teams.
 <p>Again, we need a better test. Incidentally, if you were not already convinced
 that the Question © is important, I <em>know</em> you are now: it is your Netflix
 binge sessions at stake here. In short, both tests of
-equal distributions and of mean differences are lacking when it comes to the
+equal distribution and of mean difference are lacking when it comes to the
 Question ©.</p>
 <aside>
 If you are a R user (get it? never mind), the
@@ -2602,11 +2601,10 @@ implements the approach in <span class="citation" data-cites="kamulete2022test">
 <p>That’s the bad news. What’s the good news? If these widely used statistical
 tests are not good enough, what are the alternatives? I referred to two already
 <span class="citation" data-cites="kamulete2022test lindon2022rapid">(<a href="#ref-kamulete2022test" role="doc-biblioref">Kamulete 2022</a>; <a href="#ref-lindon2022rapid" role="doc-biblioref">Lindon, Sanden, and Shirikian 2022</a>)</span>. Full disclosure: I am the author of
-<span class="citation" data-cites="kamulete2022test">Kamulete (<a href="#ref-kamulete2022test" role="doc-biblioref">2022</a>)</span>, published last year in UAI2022. Here are a few more that are
-answering the Question © more rigorously and precisely
+<span class="citation" data-cites="kamulete2022test">Kamulete (<a href="#ref-kamulete2022test" role="doc-biblioref">2022</a>)</span>, published in UAI2022. Here are a few more that answer
+the Question © more rigorously and precisely
 <span class="citation" data-cites="podkopaev2021tracking luo2022online vovk2021retrain harel2014concept">(<a href="#ref-podkopaev2021tracking" role="doc-biblioref">Podkopaev and Ramdas 2021</a>; <a href="#ref-luo2022online" role="doc-biblioref">Luo et al. 2022</a>; <a href="#ref-vovk2021retrain" role="doc-biblioref">Vovk et al. 2021</a>; <a href="#ref-harel2014concept" role="doc-biblioref">Harel et al. 2014</a>)</span>
-<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.
-When discussing my own work and the <code>dsos</code> package at
+<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. When discussing my own work and the <code>dsos</code> package at
 <a href="https://youtu.be/TALE9JUir8Q?t=26">useR! 2022</a>, I chose the title
 “Call me when it hurts” because it tries to capture the essence of the
 Question ©. Data scientists want to know when there <em>is</em> a real problem:
@@ -2618,13 +2616,13 @@ By the way, the Safe, Anytime-Valid Inference
 2022 workshop (conference) is a great place to start if you’re looking
 for more references.
 </aside>
-<p>If you stuck with me thus far, first I am sorry – not
-sorry 😉 – for abusing the Question © as a short form for
+<p>If you stuck with me this far, first I am sorry, not
+sorry 😉, for abusing the Question © as a short form for
 testing for harmful shift. It is, we agree, a silly trope not meant to be
 taken seriously. Let me conclude. While we undoubtedly need better statistical
-tests than those of equal distributions and of means difference for testing
-for harmful or adverse shift, we also happen to have more and more
-such tests at our disposal. We should use them. Alright, this is long enough.
+tests than those of equal distribution and of mean difference for testing
+for harmful or adverse shift, we also happen to have a growing number of such
+tests at our disposal. We should use them. Alright, this is long enough.
 I need to get back to work on the next one <span class="citation" data-cites="kamulete2023bayes">(<a href="#ref-kamulete2023bayes" role="doc-biblioref">Kamulete 2023</a>)</span>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
@@ -2659,7 +2657,7 @@ Vovk, Vladimir, Ivan Petej, Ilia Nouretdinov, Ernst Ahlberg, Lars Carlsson, and 
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>One rich, active and effective paradigm that in my mind does not get its due
+<li id="fn1" role="doc-endnote"><p>One rich, active and effective paradigm that to my mind does not get its due
 in ML/AI circles is statistical process control or statistical quality
 control <span class="citation" data-cites="gandy2017spcadjust flores2021statistical">(<a href="#ref-gandy2017spcadjust" role="doc-biblioref">Gandy and Kvaløy 2017</a>; <a href="#ref-flores2021statistical" role="doc-biblioref">Flores et al. 2021</a>)</span>. I am, unhappily I
 assure you, complicit in that here. This community also cares about the
